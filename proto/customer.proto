@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option go_package = "https://github.com/Subasri-V/e-commerce.git";
+
+package customer;
+
+service CustomerService {
+    rpc CreateCustomer (CustomerDetails) returns (CustomerResponse);
+}
+
+message CustomerDetails {
+    string CustomerId = 1;
+    string Firstname = 2;
+    string Lastname = 3;
+    string Password = 4;
+    string Email = 5;
+}
+
+message CustomerResponse {
+    string CustomerId = 1;
+}
